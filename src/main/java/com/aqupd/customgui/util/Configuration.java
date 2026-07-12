@@ -11,17 +11,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 
-/**
- * Holds and persists the hand position/rotation offsets.
- * Ported from the original 1.12.2 mod - values and keys kept the same
- * so old config files remain compatible.
- */
 public class Configuration {
-    public static boolean swapChat = false;
     public static boolean update = false;
     public static boolean lefthandedit = false;
 
-    // "1" = right hand, "2" = left hand (matches the original mod's naming)
     public static double x1Gui = 0.0, y1Gui = 0.0, z1Gui = 0.0;
     public static double x2Gui = 0.0, y2Gui = 0.0, z2Gui = 0.0;
     public static float x1Rot = 0.0f, y1Rot = 0.0f, z1Rot = 0.0f;
@@ -29,11 +22,6 @@ public class Configuration {
 
     private static final File configFile =
             new File(FabricLoader.getInstance().getConfigDir().toFile(), "AqMods/CHGUI.properties");
-
-    public static void changeChat() {
-        swapChat = !swapChat;
-        saveOptions();
-    }
 
     public static void resetHand() {
         if (lefthandedit) {
@@ -61,6 +49,19 @@ public class Configuration {
         x2Gui = Math.random() * -1.0 + 0.5;
         y2Gui = Math.random() * -1.0 + 1.0;
         z2Gui = Math.random() * -2.0;
+        saveOptions();
+    }
+
+    public static void swapHands() {
+        double tx = x1Gui, ty = y1Gui, tz = z1Gui;
+        float trx = x1Rot, tryR = y1Rot, trz = z1Rot;
+
+        x1Gui = x2Gui; y1Gui = y2Gui; z1Gui = z2Gui;
+        x1Rot = x2Rot; y1Rot = y2Rot; z1Rot = z2Rot;
+
+        x2Gui = tx; y2Gui = ty; z2Gui = tz;
+        x2Rot = trx; y2Rot = tryR; z2Rot = trz;
+
         saveOptions();
     }
 
@@ -111,7 +112,6 @@ public class Configuration {
                     case "x2Rot" -> x2Rot = Float.parseFloat(parts[1]);
                     case "y2Rot" -> y2Rot = Float.parseFloat(parts[1]);
                     case "z2Rot" -> z2Rot = Float.parseFloat(parts[1]);
-                    case "swapChat" -> swapChat = Boolean.parseBoolean(parts[1]);
                     case "update" -> update = Boolean.parseBoolean(parts[1]);
                 }
             }
@@ -137,7 +137,6 @@ public class Configuration {
                 writer.println("x2Rot:" + x2Rot);
                 writer.println("y2Rot:" + y2Rot);
                 writer.println("z2Rot:" + z2Rot);
-                writer.println("swapChat:" + swapChat);
                 writer.println("update:" + update);
             }
         } catch (Exception e) {
