@@ -5,7 +5,7 @@
   "key.aqupd.randomize": "Randomize Hands position",
   "key.aqupd.configgui": "Open Config",
 
-  "config.aqupd.swapchat": "Swap Chat",
+"config.aqupd.swaphands": "Swap Hands",
   "config.aqupd.resetposition": "Reset Position",
 
   "gui.left.hand": "Left hand",
