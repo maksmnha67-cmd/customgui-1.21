@@ -34,9 +34,9 @@ public class HandConfigScreen extends Screen {
         addPosSlider(x, y + spacing, "y", posValue("y"), v -> Configuration.setHandPos(handKey("y"), v));
         addPosSlider(x, y + spacing * 2, "z", posValue("z"), v -> Configuration.setHandPos(handKey("z"), v));
 
-        addRotSlider(x, y + spacing * 3 + 10, "x", rotValue("x"), v -> Configuration.setHandRot(handKey("x"), v));
-        addRotSlider(x, y + spacing * 4 + 10, "y", rotValue("y"), v -> Configuration.setHandRot(handKey("y"), v));
-        addRotSlider(x, y + spacing * 5 + 10, "z", rotValue("z"), v -> Configuration.setHandRot(handKey("z"), v));
+        addRotSlider(x, y + spacing * 3 + 10, "x", rotValue("x"), v -> Configuration.setHandRot(handKey("x"), (float) v));
+        addRotSlider(x, y + spacing * 4 + 10, "y", rotValue("y"), v -> Configuration.setHandRot(handKey("y"), (float) v));
+        addRotSlider(x, y + spacing * 5 + 10, "z", rotValue("z"), v -> Configuration.setHandRot(handKey("z"), (float) v));
 
         int row = y + spacing * 6 + 24;
         this.addDrawableChild(ButtonWidget.builder(
