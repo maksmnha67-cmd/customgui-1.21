@@ -44,11 +44,13 @@ addRotSlider(x, y + spacing * 5 + 10, "z", rotValue("z"), v -> Configuration.set
                     this.clearAndInit();
                 }).dimensions(x, row, 95, 20).build());
 
-        this.addDrawableChild(ButtonWidget.builder(
-                Text.translatable("config.aqupd.swapchat"),
-                b -> Configuration.changeChat())
+      this.addDrawableChild(ButtonWidget.builder(
+                Text.translatable("config.aqupd.swaphands"),
+                b -> {
+                    Configuration.swapHands();
+                    this.clearAndInit();
+                })
                 .dimensions(x + 105, row, 95, 20).build());
-
         this.addDrawableChild(ButtonWidget.builder(
                 Text.translatable("config.aqupd.resetposition"),
                 b -> {
