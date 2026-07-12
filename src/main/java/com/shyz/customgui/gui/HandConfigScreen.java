@@ -5,7 +5,9 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.screen.ScreenTexts;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.SliderWidget;
+import net.minecraft.client.option.SimpleOption;
 import net.minecraft.text.Text;
+import net.minecraft.util.Arm;
 
 /**
  * Simple replacement for the original GuiPageButtonList-based config screen
@@ -47,7 +49,9 @@ public class HandConfigScreen extends Screen {
         this.addDrawableChild(ButtonWidget.builder(
                 Text.translatable("config.shyz.swaphands"),
                 b -> {
-                    Configuration.swapHands();
+                    SimpleOption<Arm> mainArm = this.client.options.getMainArm();
+                    mainArm.setValue(mainArm.getValue() == Arm.LEFT ? Arm.RIGHT : Arm.LEFT);
+                    this.client.options.write();
                     this.clearAndInit();
                 })
                 .dimensions(x + 105, row, 95, 20).build());
