@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "customgui",
+  "version": "${version}",
+  "name": "Custom Hand Gui mod",
+  "description": "Mod where you can change the hands position. Ported to 1.21.1 (Fabric).",
+  "authors": ["Aqua_tic(AqUpd)", "ported by Claude"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/customgui/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.aqupd.customgui.CustomHandGui"]
+  },
+  "mixins": ["customgui.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

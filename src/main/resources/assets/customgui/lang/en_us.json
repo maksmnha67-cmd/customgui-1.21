@@ -1,0 +1,13 @@
+{
+  "key.aqupd.categories.handgui": "Hands GUI",
+  "key.aqupd.changehands": "Change main hand",
+  "key.aqupd.resethands": "Reset Hands position and rotation",
+  "key.aqupd.randomize": "Randomize Hands position",
+  "key.aqupd.configgui": "Open Config",
+
+  "config.aqupd.swapchat": "Swap Chat",
+  "config.aqupd.resetposition": "Reset Position",
+
+  "gui.left.hand": "Left hand",
+  "gui.right.hand": "Right hand"
+}

@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.aqupd.customgui.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "MixinHeldItemRenderer"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
