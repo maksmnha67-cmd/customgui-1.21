@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "Custom Hand Gui mod",
   "description": "Mod where you can change the hands position. Ported to 1.21.1 (Fabric).",
-  "authors": ["Aqua_tic(AqUpd)", "ported by Claude"],
+  "authors": ["shyz"],
   "contact": {},
   "license": "MIT",
   "icon": "assets/customgui/icon.png",
