@@ -1,12 +1,12 @@
 {
-  "key.aqupd.categories.handgui": "Hands GUI",
-  "key.aqupd.changehands": "Поменять главную руку",
-  "key.aqupd.resethands": "Сбросить позицию руки",
-  "key.aqupd.randomize": "Рандомизировать положение рук",
-  "key.aqupd.configgui": "Открыть конфигурацию",
+  "key.shyz.categories.handgui": "Hands GUI",
+  "key.shyz.changehands": "Поменять главную руку",
+  "key.shyz.resethands": "Сбросить позицию руки",
+  "key.shyz.randomize": "Рандомизировать положение рук",
+  "key.shyz.configgui": "Открыть конфигурацию",
 
-  "config.aqupd.swaphands": "Поменять руки",
-  "config.aqupd.resetposition": "Сброс положения руки",
+  "config.shyz.swaphands": "Поменять руки",
+  "config.shyz.resetposition": "Сброс положения руки",
 
   "gui.left.hand": "Левую руку",
   "gui.right.hand": "Правую руку"

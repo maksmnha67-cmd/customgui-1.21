@@ -10,7 +10,7 @@
   "icon": "assets/customgui/icon.png",
   "environment": "client",
   "entrypoints": {
-    "client": ["com.aqupd.customgui.CustomHandGui"]
+    "client": ["com.shyz.customgui.CustomHandGui"]
   },
   "mixins": ["customgui.mixins.json"],
   "depends": {

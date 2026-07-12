@@ -1,12 +1,12 @@
 {
-  "key.aqupd.categories.handgui": "Hands GUI",
-  "key.aqupd.changehands": "Change main hand",
-  "key.aqupd.resethands": "Reset Hands position and rotation",
-  "key.aqupd.randomize": "Randomize Hands position",
-  "key.aqupd.configgui": "Open Config",
+  "key.shyz.categories.handgui": "Hands GUI",
+  "key.shyz.changehands": "Change main hand",
+  "key.shyz.resethands": "Reset Hands position and rotation",
+  "key.shyz.randomize": "Randomize Hands position",
+  "key.shyz.configgui": "Open Config",
 
-"config.aqupd.swaphands": "Swap Hands",
-  "config.aqupd.resetposition": "Reset Position",
+  "config.shyz.swaphands": "Swap Hands",
+  "config.shyz.resetposition": "Reset Position",
 
   "gui.left.hand": "Left hand",
   "gui.right.hand": "Right hand"
